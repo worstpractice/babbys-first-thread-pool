@@ -22,7 +22,11 @@ fn create_timestamp() -> String {
 }
 
 fn log_request() {
-  let mut file = OpenOptions::new().write(true).append(true).open("production_grade_database.txt").unwrap();
+  let mut file = OpenOptions::new()
+    .write(true)
+    .append(true)
+    .open("production_grade_database.txt")
+    .unwrap();
 
   let timestamp = create_timestamp();
 

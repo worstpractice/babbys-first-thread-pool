@@ -55,6 +55,7 @@ impl Default for ThreadPool {
   /// The default size for the thread pool is one thread per logical CPU.
   fn default() -> ThreadPool {
     let logical_cpus = num_cpus::get();
+
     ThreadPool::new(logical_cpus)
   }
 }
